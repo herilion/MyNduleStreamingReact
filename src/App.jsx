@@ -5,11 +5,12 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [isLoginActive, setIsLoginActive] = useState(false)
 
   return (
     <div className="App">
-      <Accueil />
-      <Login />
+      {!isLoginActive && <Accueil isLoginActive={isLoginActive} setIsLoginActive={setIsLoginActive} />}
+      {isLoginActive && <Login isLoginActive={isLoginActive} setIsLoginActive={setIsLoginActive} />}
     </div>
   )
 }
