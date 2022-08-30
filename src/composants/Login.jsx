@@ -1,6 +1,15 @@
 import '../styles/accueilStyle.css'
 import music from '../assets/music.png'
+import React from 'react';
+import GoogleLogin from 'react-google-login';
 const Login = () => {
+    const clienId = '1045931220842-nu223q4a2lg6sqno0aamg3riesl6jjtu.apps.googleusercontent.com'
+    const handleFailure = (result) => {
+        alert(result);
+    };
+    const handleLogin = (googleData) => {
+        console.log(googleData);
+    }
     return (
         <section className="container">
             <div>
@@ -16,7 +25,17 @@ const Login = () => {
                 <div><input placeholder='Votre mot de passe' type="text" className='input' /></div>
             </div>
             <div className='buttonContain'>
-                <div className='button'>Se connecter</div>
+                <div className='button'>Log in</div>
+            </div>
+            <div>
+                <GoogleLogin
+                    clientId={clienId}
+                    buttonText="Log in with Google"
+                    onSuccess={handleLogin}
+                    onFailure={handleFailure}
+                    cookiePolicy={'single_host_origin'}>
+
+                </GoogleLogin>
             </div>
 
         </section>
