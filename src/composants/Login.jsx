@@ -1,14 +1,34 @@
 import '../styles/accueilStyle.css'
 import music from '../assets/music.png'
-import React from 'react';
+import React, { useState } from 'react';
 import GoogleLogin from 'react-google-login';
 const Login = () => {
     const clienId = '1045931220842-nu223q4a2lg6sqno0aamg3riesl6jjtu.apps.googleusercontent.com'
+    const [loginData, setLoginData] = useState(
+        localStorage.getItem('logindata')
+            ? JSON.parse(localStorage.getItem('loginData'))
+            : null
+    )
     const handleFailure = (result) => {
         alert(result);
     };
-    const handleLogin = (googleData) => {
-        console.log(googleData);
+    const handleLogin = async (googleData) => {
+        const res = await fetch('/api/google-login', {
+            method: POST,
+            body: JSON.stringify({
+                token: googleData.tokenId,
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+        const data = await res.json();
+        setLoginData(data);
+        localStorage.setItem('loginData', JSON.stringify(data));
+    };
+    const handleLogout = () => {
+        localStorage.removeItem('loginData');
+        setLoginData(null);
     }
     return (
         <section className="container">
@@ -28,14 +48,25 @@ const Login = () => {
                 <div className='button'>Log in</div>
             </div>
             <div>
-                <GoogleLogin
-                    clientId={clienId}
-                    buttonText="Log in with Google"
-                    onSuccess={handleLogin}
-                    onFailure={handleFailure}
-                    cookiePolicy={'single_host_origin'}>
+                {
+                    loginData ? (
+                        <div>
+                            <h3>You logged in as {loginData.email}</h3>
+                            <button onClick={handleLogout}>Log out</button>
+                        </div>
+                    )
+                        : (
+                            <GoogleLogin
+                                clientId={clienId}
+                                buttonText="Log in with Google"
+                                onSuccess={handleLogin}
+                                onFailure={handleFailure}
+                                cookiePolicy={'single_host_origin'}>
 
-                </GoogleLogin>
+                            </GoogleLogin>
+                        )
+                }
+
             </div>
 
         </section>
