@@ -3,6 +3,7 @@ import music from '../assets/music.png'
 import React from 'react';
 import { useEffect, useState } from "react";
 import GoogleLogin from 'react-google-login';
+// import axios from 'axios';
 const Login = () => {
     // =======Google=========
     const clienId = '1045931220842-nu223q4a2lg6sqno0aamg3riesl6jjtu.apps.googleusercontent.com'
@@ -40,6 +41,9 @@ const Login = () => {
     const responseType = "token";
 
     const [token, setToken] = useState("")
+    // const [searchKey, setSearchKey] = useState("")
+    // const [artists, setArtists] = useState([])
+
     useEffect(() => {
         const hash = window.location.hash
         let token = window.localStorage.getItem("token")
@@ -61,6 +65,29 @@ const Login = () => {
         setToken("")
         window.localStorage.removeItem("token")
     }
+    // const searchArtists = async (e) => {
+    //     e.preventDefault()
+    //     const { data } = await axios.get("https://api.spotify.com/v1/search", {
+    //         headers: {
+    //             Authorization: `Bearer ${token}`
+    //         },
+    //         params: {
+    //             q: searchKey,
+    //             type: "artist"
+    //         }
+    //     })
+
+    //     setArtists(data.artists.items)
+    // }
+
+    // const renderArtists = () => {
+    //     return artists.map(artist => (
+    //         <div key={artist.id}>
+    //             {artist.images.length ? <img width={"100%"} src={artist.images[0].url} alt="" /> : <div>No Image</div>}
+    //             {artist.name}
+    //         </div>
+    //     ))
+    // }
     // =======connect to spotify api and=========
     return (
         <section className="container">
@@ -81,6 +108,16 @@ const Login = () => {
                     <a href={`${authEndPoint}?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=${responseType}`} className='button'>Log in</a>
                     : <button onClick={logout}>Logout</button>
                 }
+                {/* {token ?
+                    <form onSubmit={searchArtists}>
+                        <input type="text" onChange={e => setSearchKey(e.target.value)} />
+                        <button type={"submit"}>Search</button>
+                    </form>
+
+                    : <h2>Please login</h2>
+                }
+
+                {renderArtists()} */}
 
             </div>
             <div>
