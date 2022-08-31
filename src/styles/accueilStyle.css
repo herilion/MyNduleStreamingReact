@@ -27,7 +27,8 @@ img{
     /* width: 200px; */
 }
 .Accueil{
-    /* display: none; */
+    
+    align-items: center;
 }
 .Connection{
     display: flex;
