@@ -35,7 +35,7 @@ const Login = () => {
     }
     // =======Google=========
     // =======connect to spotify api start=========
-    const clientId = '5b0895ca0b244db4820e70942b260ba6';
+    const clientId = 'efed7b8e30ee495f9fe5fe8a6dd5fbda';
     const redirectUri = "http://localhost:5173/";
     const authEndPoint = "https://accounts.spotify.com/authorize";
     const responseType = "token";
