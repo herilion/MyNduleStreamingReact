@@ -73,7 +73,7 @@ const Login = () => {
                 <div><input placeholder='Votre mail' type="text" className='input' /></div>
             </div>
             <div className='inputGroup'>
-                <label htmlFor="email" className='label'>Email</label>
+                <label htmlFor="email" className='label'>Mot de Passe</label>
                 <div><input placeholder='Votre mot de passe' type="text" className='input' /></div>
             </div>
             <div className='buttonContain'>
