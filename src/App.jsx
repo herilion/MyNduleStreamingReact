@@ -1,6 +1,6 @@
 // import { useState } from 'react'
 // import Accueil from './composants/Accueil'
-// import Login from './composants/Login'
+import Login from './composants/Login'
 // import TableauMusic from './composants/tableauMusic'
 import TableauMusic from './composants/tableauMusic'
 import './App.css'
@@ -13,8 +13,8 @@ function App() {
     <div className="App">
       {/* {!isLoginActive && <Accueil isLoginActive={isLoginActive} setIsLoginActive={setIsLoginActive} />}
       {isLoginActive && <Login isLoginActive={isLoginActive} setIsLoginActive={setIsLoginActive} />} */}
-      {/* <Login /> */}
-      <TableauMusic />
+      <Login />
+      {/* <TableauMusic /> */}
     </div>
   )
 }
