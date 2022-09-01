@@ -8,6 +8,13 @@ const TableauMusic = () => {
                     <img src={music} alt="music" />
                     <h2>My Ndule</h2>
                 </div>
+                <div className="listeIcons">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
             </div>
 
         </section>
