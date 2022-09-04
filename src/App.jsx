@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Login from './composants/Login'
+import TableauMusic from './composants/tableauMusic';
 import './App.css'
 import { getTokenFromResponse } from './composants/spotifyThings';
 import SpotifyWebApi from 'spotify-web-api-js';
@@ -25,7 +26,7 @@ function App() {
     <div className="App">
       {
         token ? (
-          <h1>lionge</h1>
+          <TableauMusic />
         ) : (
           <Login />
         )
