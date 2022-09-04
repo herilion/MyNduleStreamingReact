@@ -4,6 +4,7 @@ import './App.css'
 import { getTokenFromResponse } from './composants/spotifyThings';
 import SpotifyWebApi from 'spotify-web-api-js';
 
+const spotify = new SpotifyWebApi();
 function App() {
   const [token, setToken] = useState(null);
   useEffect(() => {
