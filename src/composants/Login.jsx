@@ -2,7 +2,7 @@ import '../styles/accueilStyle.css'
 import music from '../assets/music.png'
 import React from 'react';
 import { useState } from "react";
-import accessUrl from '../composants/spotifyThings'
+import { accessUrl } from '../composants/spotifyThings'
 import GoogleLogin from 'react-google-login';
 
 const Login = () => {
