@@ -1,20 +1,30 @@
-// import { useState } from 'react'
-// import Accueil from './composants/Accueil'
+import React, { useEffect, useState } from 'react'
 import Login from './composants/Login'
-// import TableauMusic from './composants/tableauMusic'
-import TableauMusic from './composants/tableauMusic'
 import './App.css'
+import { getTokenFromResponse } from './composants/spotifyThings'
 
 function App() {
-  // const [count, setCount] = useState(0)
-  // const [isLoginActive, setIsLoginActive] = useState(false)
+  const [token, setToken] = useState(null);
+  useEffect(() => {
+    const hash = getTokenFromResponse();
+    window.location.hash = "";
+    const _token = hash.access_token;
+    if (_token) {
+      setToken(_token)
+    }
 
+
+  }, []);
   return (
     <div className="App">
-      {/* {!isLoginActive && <Accueil isLoginActive={isLoginActive} setIsLoginActive={setIsLoginActive} />}
-      {isLoginActive && <Login isLoginActive={isLoginActive} setIsLoginActive={setIsLoginActive} />} */}
-      <Login />
-      {/* <TableauMusic /> */}
+      {
+        token ? (
+          <h1>lionge</h1>
+        ) : (
+          <Login />
+        )
+      }
+
     </div>
   )
 }
