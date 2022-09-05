@@ -1,22 +1,16 @@
 import React from "react";
-import music from '../assets/music.png';
-const TableauMusic = () => {
+import Aside from "./Aside";
+import Body from "./Body";
+import Footer from "./Footer";
+import '../styles/tableauMusic.css'
+const TableauMusic = ({ spotify }) => {
     return (
-        <section>
-            <div className="aside">
-                <div className="logo">
-                    <img src={music} alt="music" />
-                    <h2>My Ndule</h2>
-                </div>
-                <div className="listeIcons">
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
+        <section className="musicDash">
+            <div className="musicBody">
+                <Aside />
+                <Body />
             </div>
-
+            <Footer />
         </section>
     );
 }
