@@ -4,24 +4,32 @@ import TableauMusic from './composants/tableauMusic';
 import './App.css'
 import { getTokenFromResponse } from './composants/spotifyThings';
 import SpotifyWebApi from 'spotify-web-api-js';
+import { useDataLayervalue } from './DataLayer';
 
 const spotify = new SpotifyWebApi();
 function App() {
-  const [token, setToken] = useState(null);
+  const [{ user, token }, dispatch] = useDataLayervalue();
+
   useEffect(() => {
     const hash = getTokenFromResponse();
     window.location.hash = "";
     const _token = hash.access_token;
     if (_token) {
-      setToken(_token);
-      spotify.setAccessToken(_token);
-      spotify.getMe().then(user => {
-        console.log('user', user);
+      dispatch({
+        type: 'SET_TOKEN',
+        token: _token,
       })
+
+      spotify.setAccessToken(_token);
+      spotify.getMe().then((user) => {
+        dispatch({
+          type: 'SET_USER',
+          user: user,
+        });
+      });
     }
-
-
   }, []);
+  console.log('utilisateur 🎅', user);
   return (
     <div className="App">
       {
