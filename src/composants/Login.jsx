@@ -34,7 +34,7 @@ const Login = () => {
     // =======Google=========
     return (
         <section className="container">
-            <div>
+            <div className='logoAndtext'>
                 <img src={music} alt="" />
                 <h2>Welcome to My Ndule</h2>
             </div>

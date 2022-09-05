@@ -1,7 +1,8 @@
+import '../styles/body.css'
 const Body = () => {
     return (
-        <div>
-
+        <div className="body">
+            body llokksh
         </div>
     );
 }

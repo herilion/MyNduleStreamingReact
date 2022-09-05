@@ -1,6 +1,9 @@
+import '../styles/aside.css'
 const Aside = () => {
     return (
-        <div></div>
+        <div className="aside">
+            aside lookkhhd
+        </div>
     );
 }
 
