@@ -43,7 +43,7 @@ img{
     font-size: 30px;
 }
 .container{
-    /* display: flex; */
+    display: flex;
         flex-direction: column;
         height: 600px;
         width: 350px;
@@ -101,12 +101,26 @@ img{
     }
     
     .buttonContain {
+       
         display: flex;
         justify-content: center;
     }
     /* tableau music style */
     .aside{
-        
+        width: 270px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 30px;
+    height: 100%;
+    border-right: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    }
+    .aside .logo{
+        margin-top: 0;
     }
     .aside img{
         width: 100px;
