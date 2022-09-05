@@ -104,3 +104,11 @@ img{
         display: flex;
         justify-content: center;
     }
+    /* tableau music style */
+    .aside{
+        
+    }
+    .aside img{
+        width: 100px;
+        border-radius: 50%;
+    }
