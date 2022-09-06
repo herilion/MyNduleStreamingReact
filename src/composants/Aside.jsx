@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/aside.css'
 import music from '../assets/music.png'
+// import { HomeIcon, SearchIcon, LibraryMusicIcon } from '@mui/icons-material';
 import AsideOption from './AsideOption';
 const Aside = () => {
     return (
@@ -12,6 +13,10 @@ const Aside = () => {
             <AsideOption title="Accueil" />
             <AsideOption title="Recherche" />
             <AsideOption title="Bibliothèque" />
+            <strong>PlayLISTS</strong>
+            <AsideOption title="hip Hop" />
+            <AsideOption title="RNB" />
+            <AsideOption title="Rock" />
 
         </div>
     );

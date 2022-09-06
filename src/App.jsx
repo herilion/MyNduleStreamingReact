@@ -30,6 +30,8 @@ function App() {
           user: user,
         });
       });
+      //get playList
+      spotify.getUserPlaylists
     }
   }, []);
   console.log('utilisateur 🎅', user);

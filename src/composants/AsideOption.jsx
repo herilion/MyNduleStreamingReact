@@ -1,7 +1,9 @@
-const AsideOption = ({ title, icon }) => {
+import React from "react";
+const AsideOption = ({ title, Icon }) => {
     return (
         <div>
-            <p>{title}</p>
+            <h4>{title}</h4>
+
         </div>
     );
 }
