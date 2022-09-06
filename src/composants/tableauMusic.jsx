@@ -8,7 +8,7 @@ const TableauMusic = ({ spotify }) => {
         <section className="musicDash">
             <div className="musicBody">
                 <Aside />
-                <Body />
+                <Body spotify={spotify} />
             </div>
             <Footer />
         </section>

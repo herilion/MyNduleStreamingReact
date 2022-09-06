@@ -5,7 +5,7 @@ import music from '../assets/music.png'
 import { useDataLayervalue } from '../DataLayer';
 import AsideOption from './AsideOption';
 const Aside = () => {
-    const [{ playlists }, dispatch] = useDataLayerValue()
+    const [{ playlists }, dispatch] = useDataLayervalue()
     return (
         <div className="aside">
             <div className='logotext'>
@@ -16,12 +16,9 @@ const Aside = () => {
             <AsideOption title="Recherche" />
             <AsideOption title="Bibliothèque" />
             <strong>PlayLISTS</strong>
-            {playlists?.items?.map(playlists => (
-                <AsideOption title={playlists.name} />
+            {playlists?.items?.map(playlist => (
+                <AsideOption title={playlist.name} />
             ))}
-            <AsideOption title="hip Hop" />
-            <AsideOption title="RNB" />
-            <AsideOption title="Rock" />
 
         </div>
     );

@@ -35,8 +35,14 @@ function App() {
         dispatch({
           type: 'SET_PLAYLISTS',
           playlists: playlists,
-        })
-      })
+        });
+      });
+      spotify.getPlaylist('37i9dQZF1DWXJfnUiYjUKT').then((response) => {
+        dispatch({
+          type: 'SET_NEW_MUSIC_FRIDAY',
+          new_music_friday: response,
+        });
+      });
     }
   }, []);
   console.log('utilisateur 🎅', user);

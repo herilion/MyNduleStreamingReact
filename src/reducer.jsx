@@ -5,8 +5,8 @@ export const initialState = {
     item: null,
     // token: null,
 
-    //à supprimer
-    token: 'BQC6V1Ahw0CZX_6yIswMwK5ECGTNq-QWG18ombUeRUenynXIzO14ZDNjAC1l5W-_6nGwcLGIAC2kf5ozIy8c1KddhQ7rER01EBHhD7YXRms7HVf8liYhbHkyXgdfFJouxwdpdA-DRHbB3NeoQ0IPWVxFzauvJE1D7Ei9wSq-DzRKiFr6CWK9LpSOzQzIOIeMsiJdFPslttq3kir0tI-x',
+    // //à supprimer
+    token: 'BQBAPRclnY5P8vdoHaoN6tcH1uwoh1KUlt8Wij0tUA6a8SXsq5-pbFqKjtezPpbXLvzIsPgHH8l83ErqoYr5YpI0SdPJTYHa9HIOCSxv_Ai5JeijuTHWSb0Cff6YDI8W32bB4oNn74USjKh90uEZJj8kTO9RS_RGKfXOQsbiEucF9f3mahCbbPPJJ3I3kGHm8uJAOgaCCxnz9j8xHPeh',
 };
 
 const reducer = (state, action) => {
@@ -29,6 +29,11 @@ const reducer = (state, action) => {
                 ...state,
                 playlists: action.playlists,
             };
+        case 'SET_NEW_MUSIC_FRIDAY':
+            return {
+                ...state,
+                new_music_friday: action.new_music_friday,
+            }
         default:
             return state;
     }
