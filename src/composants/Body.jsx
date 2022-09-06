@@ -17,6 +17,9 @@ const Body = ({ spotify }) => {
                 </div>
             </div>
             <div className='songs'>
+                {new_music_friday?.tracks.items.map(item => {
+                    <SongRow track={item.track} />
+                })}
 
             </div>
         </div>
