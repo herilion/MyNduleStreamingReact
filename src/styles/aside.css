@@ -7,3 +7,12 @@
     padding-right: 10px;
 
 }
+.aside img{
+    width: 60px;
+    border: 50px;
+}
+.aside .logotext{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
