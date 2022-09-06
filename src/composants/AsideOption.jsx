@@ -1,7 +1,7 @@
 const AsideOption = ({ title, icon }) => {
     return (
         <div>
-
+            <p>{title}</p>
         </div>
     );
 }
