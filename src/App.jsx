@@ -31,7 +31,12 @@ function App() {
         });
       });
       //get playList
-      spotify.getUserPlaylists
+      spotify.getUserPlaylists().then((playlists) => {
+        dispatch({
+          type: 'SET_PLAYLISTS',
+          playlists: playlists
+        })
+      })
     }
   }, []);
   console.log('utilisateur 🎅', user);
