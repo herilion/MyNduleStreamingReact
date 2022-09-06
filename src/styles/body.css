@@ -7,10 +7,11 @@
     --skinColor: #ec1839;
 }
 .body{ 
+    height: 100vh;
     flex: 0.8;
+    padding: 30px;
     border: 2px solid var(--skinColor);
     background-color: rgb(91,87, 115);
     background: linear-gradient(transparent,rgb(0,0,0,1));
-
-   
+    
 }

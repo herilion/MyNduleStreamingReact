@@ -2,5 +2,8 @@
     border: 2px solid blueviolet;
     height: 100vh;
     flex: 0.2;
+    max-width: 230px;
+    padding-left: 10px;
+    padding-right: 10px;
 
 }
