@@ -6,7 +6,7 @@ export const initialState = {
     // token: null,
 
     // //à supprimer
-    token: 'BQBAPRclnY5P8vdoHaoN6tcH1uwoh1KUlt8Wij0tUA6a8SXsq5-pbFqKjtezPpbXLvzIsPgHH8l83ErqoYr5YpI0SdPJTYHa9HIOCSxv_Ai5JeijuTHWSb0Cff6YDI8W32bB4oNn74USjKh90uEZJj8kTO9RS_RGKfXOQsbiEucF9f3mahCbbPPJJ3I3kGHm8uJAOgaCCxnz9j8xHPeh',
+    // token: 'BQBAPRclnY5P8vdoHaoN6tcH1uwoh1KUlt8Wij0tUA6a8SXsq5-pbFqKjtezPpbXLvzIsPgHH8l83ErqoYr5YpI0SdPJTYHa9HIOCSxv_Ai5JeijuTHWSb0Cff6YDI8W32bB4oNn74USjKh90uEZJj8kTO9RS_RGKfXOQsbiEucF9f3mahCbbPPJJ3I3kGHm8uJAOgaCCxnz9j8xHPeh',
 };
 
 const reducer = (state, action) => {

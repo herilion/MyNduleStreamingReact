@@ -11,7 +11,9 @@
   "dependencies": {
     "@mui/icons-material": "^5.10.3",
     "axios": "^0.27.2",
+    "bootstrap": "^5.2.0",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
     "react-google-login": "^5.2.2",
     "spotify-web-api-js": "^1.5.2"

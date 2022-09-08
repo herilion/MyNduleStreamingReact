@@ -1,11 +1,4 @@
-:root {
-    --bgBlack-900: #f2f2fc;
-    --bgBlack-100: #fdf9ff;
-    --bgBlack-50: #e8dfec;
-    --textBlack-700: #504e70;
-    --textBlack-900: #302e4d;
-    --skinColor: #ec1839;
-}
+/* 
 .body{ 
     height: 100vh;
     flex: 0.8;
@@ -14,4 +7,4 @@
     background-color: rgb(91,87, 115);
     background: linear-gradient(transparent,rgb(0,0,0,1));
     
-}
+} */

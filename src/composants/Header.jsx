@@ -5,11 +5,6 @@ const Header = () => {
     return (
         <div className="header">
             <div>
-                <input
-                    placeholder="Search for artists"
-                    type="text" />
-            </div>
-            <div>
                 <img src={user?.images[0]?.url} alt="" />
                 <h4>{user?.display_name}</h4>
             </div>
