@@ -59,7 +59,7 @@ function SongRow() {
                 setAlbums(data.albums.items);
             })
     }
-    // console.log(artistID)
+
     return (
         <div className="App">
             <Container>
