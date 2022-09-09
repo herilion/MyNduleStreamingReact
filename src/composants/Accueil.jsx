@@ -10,7 +10,7 @@ const Accueil = ({ isLoginActive, setIsLoginActive }) => {
                 </div>
                 <div className='NameApp'>My Ndule</div>
             </div>
-            {/* <a href="/Login.jsx" className='btn'>Se connecter</a> */}
+
             <button
                 className='btn'
                 onClick={() => setIsLoginActive(true)}
