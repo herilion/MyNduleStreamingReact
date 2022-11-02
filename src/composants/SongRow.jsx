@@ -11,8 +11,11 @@ import {
 } from "react-bootstrap";
 import { useState, useEffect } from 'react'
 
-const CLIENT_ID = "af27c3b99f1944b285e63baa7b33c5f3";
-const CLIENT_SECRET = "dd6f1c4b77b8498193d77dd0aa26b511"
+const CLIENT_ID = import.meta.env.VITE_CLIENT_ID
+const CLIENT_SECRET = import.meta.env.VITE_CLIENT_SECRET
+// const CLIENT_ID = "8c40749b38894fee82c517f8ef2d9c9b"
+// const CLIENT_SECRET = "07151fd21f054142966fa141da1392d6"
+
 function SongRow() {
     const [searchInput, setSearchInput] = useState("");
     const [artistID, setArtistID] = useState("Fally");
